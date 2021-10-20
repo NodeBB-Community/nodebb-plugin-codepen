@@ -1,9 +1,9 @@
 (function(module) {
     "use strict";
 
-    var codepen = {},
-        embed = '<p data-height="268" data-theme-id="0" data-slug-hash="$2" data-default-tab="result" data-user="$1" class=\'codepen\'></p><script async src="//codepen.io/assets/embed/ei.js"></script>';
-    var pen = /<a href="(?:http?:\/\/)?(codepen)\.io\/.+\/pen\/([\w\-_]+)">.+<\/a>/g;
+    const codepen = {};
+    const embed = '<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="$2" data-preview="true" data-user="$1" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"></p>';
+    var pen = /<a href="(?:https?:\/\/)?codepen\.io\/(.+)\/pen\/([\w\-_]+)".+?<\/a>/g;
 
     codepen.parse = function(data, callback) {
         if (!data || !data.postData || !data.postData.content) {
@@ -15,6 +15,12 @@
 
         callback(null, data);
     };
+
+    codepen.addEmbedScript = (scripts) => {
+        scripts.push('https://cpwebassets.codepen.io/assets/embed/ei.js');
+
+        return scripts;
+    }
 
     module.exports = codepen;
 }(module));
