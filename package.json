@@ -1,9 +1,9 @@
 {
   "name": "nodebb-plugin-codepen",
   "version": "0.2.0",
-    "nbbpm": {
-        "compatibility": "^0.6.0"
-    },
+  "nbbpm": {
+    "compatibility": "^0.6.0"
+  },
   "description": "NodeBB Codepen Plugin",
   "main": "library.js",
   "scripts": {
@@ -30,5 +30,10 @@
   "readme": "",
   "readmeFilename": "README.md",
   "_id": "nodebb-plugin-codepen@0.2.0",
-  "_from": "nodebb-plugin-codepen@~0.2.0"
+  "_from": "nodebb-plugin-codepen@~0.2.0",
+  "devDependencies": {
+    "eslint": "7.x",
+    "eslint-config-nodebb": "0.0.3",
+    "eslint-plugin-import": "2.x"
+  }
 }
