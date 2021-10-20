@@ -1,6 +1,6 @@
 {
   "name": "@nodebb/nodebb-plugin-codepen",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "nbbpm": {
     "compatibility": "^1.17.0"
   },
