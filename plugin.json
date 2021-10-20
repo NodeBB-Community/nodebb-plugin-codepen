@@ -10,6 +10,8 @@
 	],
 	"staticDirs": {
         "css": "./static"
-    }
-
+    },
+	"scripts": [
+		"./static/main.js"
+	]
 }
